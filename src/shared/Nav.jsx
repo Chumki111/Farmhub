@@ -41,7 +41,7 @@ function Navbar({ window }) {
 
   return (
     <div className="flex flex-col">
-    <nav className="bg-gradient-to-r from-[#1f4e3d] via-[#285545] to-[#7EA799] text-white">
+    <nav className="bg-gradient-to-r from-primary via-[#285545] to-[#7EA799] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -57,7 +57,7 @@ function Navbar({ window }) {
                 <Link
                   key={item.pathname}
                   to={item.pathname}
-                  className="hover:text-[#2AB939] text-xl hover:underline"
+                  className="hover:text-secondary text-xl hover:underline"
                 >
                   {item.route}
                 </Link>
@@ -94,7 +94,7 @@ function Navbar({ window }) {
             <img className="h-10" src={favicon} alt="favicon" />
             <button
               onClick={handleDrawerToggle}
-              className="bg-[#2AB939] text-white p-2 rounded-md"
+              className="bg-secondary text-white p-2 rounded-md"
             >
               <FaTimes className="block h-6 w-6" aria-hidden="true" />
             </button>

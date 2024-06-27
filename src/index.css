@@ -15,4 +15,9 @@
     height: 5px; /* Adjust the thickness of the line */
     background-color: #2AB939;
   }
+  :root {
+    --primary-color: #1f4e3d;
+    --secondary-color: #2AB939;
+    --third-color: #fbd41f;
+  }
   
