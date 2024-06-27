@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hope {
+    position: relative;
+  }
+  
+  .hope::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust the position of the line */
+    width: 100%;
+    height: 5px; /* Adjust the thickness of the line */
+    background-color: #2AB939;
+  }
+  

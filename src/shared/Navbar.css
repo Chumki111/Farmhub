@@ -1,0 +1,27 @@
+.nav.active{
+    color: #e3f70954;
+    text-decoration: underline;
+    
+    
+    
+}
+
+.nav{
+    margin-right: 5px;
+    margin-left: 5px;
+   
+}
+
+.navbar {
+ 
+    width: 100%;
+    position: fixed;
+    transition: 0.3s ease-in-out;
+    z-index: 99;
+}
+.navbar.scrolled {
+    background-color:#1f4e3d;
+    box-shadow: 5px -1px 12px -5px grey;
+    
+
+}
