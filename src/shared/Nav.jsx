@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaBars, FaShoppingCart, FaTimes } from 'react-icons/fa';
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
-import logo from '../../public/logo.png';
+import logo from '/logo.png';
 import favicon from '/favcion.png'
 import './Navbar.css'
 const navItems = [
