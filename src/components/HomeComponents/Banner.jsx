@@ -6,7 +6,8 @@ const Banner = () => {
     <div className='flex flex-col'>
       <div className="bg-gradient-to-r from-primary via-[#285545] to-[#7EA799] text-white">
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex flex-col md:flex-row justify-between mt-10 pb-10'>
+          <div className='flex flex-col md:flex-row justify-between mt-10 pb-12'>
+            {/* content section */}
             <div className='pt-8 md:pt-10'>
               <h1 className='text-4xl md:text-4xl lg:text-6xl font-semibold md:leading-[85px]'>Plowing the earth</h1>
               <h2 className='text-4xl md:text-4xl lg:text-6xl font-[300px] md:leading-[85px]'><span className="hope">harvesting</span> hope</h2>
@@ -20,6 +21,7 @@ const Banner = () => {
                 <MdKeyboardDoubleArrowRight className='text-4xl' />
                 <p className='text-xl'>Crops of opportunity fields of dreams</p>
               </div>
+              {/* button section */}
               <div className='pt-7'>
                 <button className="relative text-xl bg-secondary text-white py-3 px-10 rounded-full overflow-hidden group">
                   <span className="relative z-10 flex items-center space-x-2">
@@ -30,7 +32,8 @@ const Banner = () => {
                 </button>
               </div>
             </div>
-            <div className='order-first md:order-last'>
+            {/* image section */}
+            <div className='pt-4 md:pt-0'>
               <img src={image} alt="" className='animate-pulse' />
             </div>
           </div>
