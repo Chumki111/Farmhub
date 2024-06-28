@@ -15,7 +15,7 @@ const GallarySection = () => {
             <div className="flex flex-col mt-10 relative">
                 <div className="bg-[#EFF3ED] ">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className='pt-14 pb-28'>
+                        <div className='pt-14 pb-36'>
                             <div className='text-center'>
                                 <span className='text-secondary text-lg font-medium text-center'>OUR GALLARY</span>
                                 <h1 className='text-4xl md:text-4xl lg:text-6xl font-semibold lg:leading-[60px] pt-4 text-primary whitespace-pre-line max-w-2xl mx-auto'>
@@ -25,7 +25,7 @@ const GallarySection = () => {
                             </div>
                             <div className="flex flex-col lg:flex-row gap-5 pt-10">
                                 <img src={image1} alt="" className='rounded-2xl' />
-                                <img src={image2} alt="" className='rounded-2xl bg-cover ' />
+                                <img src={image2} alt="" className='rounded-2xl ' />
                             </div>
                             <div className="flex flex-wrap md:flex-wrap justify-evenly gap-3 md:gap-0 pt-8">
                                 <img src={image3} alt="" className='h-[425px] rounded-2xl' />

@@ -11,7 +11,7 @@ const CountUpSection = () => {
     const [counter,setCounter] = useState(false)
   return (
     <div className="mb-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="bg-white shadow-lg rounded-2xl py-10 px-2">
+    <div className="bg-white shadow-xl shadow-[#dbf0d0] rounded-2xl py-10 px-2">
     <ScrollTrigger onEnter={() => setCounter(true)} onExit={() => setCounter(false)}>
         <div className="flex justify-evenly flex-wrap">
             {/* first card */}
