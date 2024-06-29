@@ -14,10 +14,10 @@ const ServicesSection = () => {
                         Harvesting dreams one crop at a time
                     </h1>
                 </div>
-                <div className="grid grid-cols-3 mt-10 space-x-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-7">
                     {/* card 1 */}
                     <div className="border-[#EFF3ED] border-[1px] rounded  ">
-                        <div className='flex gap-5 py-3 px-5 '>
+                        <div className='flex  gap-5 py-3 px-5 '>
                         <img src={image1} alt="" className=''/>
                         <div className='bg-[#EFF3ED] h-36 w-[2px]'></div>
                         <div className=''>
