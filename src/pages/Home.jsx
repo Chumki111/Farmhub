@@ -1,8 +1,10 @@
 import Banner from "../components/HomeComponents/Banner"
 import ChooseUsSection from "../components/HomeComponents/ChooseUsSection"
+import CompanySection from "../components/HomeComponents/CompanySection"
 import GallarySection from "../components/HomeComponents/GallarySection"
 import MessageSection from "../components/HomeComponents/MessageSection"
 import ServicesSection from "../components/HomeComponents/ServicesSection"
+import SubscribeSection from "../components/HomeComponents/SubscribeSection"
 import Testimonial from "../components/HomeComponents/Testimonial"
 
 
@@ -15,6 +17,8 @@ const Home = () => {
     <ServicesSection/>
     <Testimonial/>
     <MessageSection/>
+    <CompanySection/>
+    <SubscribeSection/>
     </>
   )
 }
