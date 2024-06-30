@@ -1,7 +1,6 @@
 import{ useState } from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { FaBars, FaShoppingCart, FaTimes } from 'react-icons/fa';
+import { FaBars,FaTimes } from 'react-icons/fa';
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
 import logo from '/logo.png';
@@ -13,16 +12,21 @@ const navItems = [
     pathname: '/',
   },
   {
-    route: 'About',
+    route: 'About Us',
     pathname: '/about',
   },
+  
   {
-    route: 'Skills',
-    pathname: '/skills',
+    route: 'services',
+    pathname: '/services',
   },
   {
-    route: 'Projects',
-    pathname: '/projects',
+    route:'Gallery',
+    pathname:'/gallery'
+  },
+  {
+    route: 'Blogs',
+    pathname: '/blogs',
   },
   {
     route: 'Contact',
@@ -51,7 +55,7 @@ function Navbar({ window }) {
             </div>
           </div>
           
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-7">
               {navItems.map((item) => (
                 <Link
@@ -62,12 +66,18 @@ function Navbar({ window }) {
                   {item.route}
                 </Link>
               ))}
-              <button>ddfghfg</button>
+              <button className="relative text-xl bg-third text-white py-1 px-8 rounded-full overflow-hidden group">
+                  <span className="relative z-10 flex items-center space-x-2">
+                    <span>Login</span>
+                    
+                  </span>
+                  <div className="absolute inset-0 bg-secondary transition-all duration-300 ease-in-out transform scale-x-0 scale-y-0 group-hover:scale-x-100 group-hover:scale-y-100 origin-center"></div>
+                </button>
             </div>
             
          
           </div>
-          <div className="-mr-2 flex md:hidden">
+          <div className="-mr-2 flex lg:hidden">
             <button
               onClick={handleDrawerToggle}
               className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
@@ -110,7 +120,15 @@ function Navbar({ window }) {
                 {item.route}
               </Link>
             ))}
-            
+           <div className="divide-y mb-4"></div>
+           <button className="relative text-xl bg-third text-white py-2 px-8 text-center rounded-full overflow-hidden group">
+                  
+                  <span className='z-10 relative'>Login</span>
+                  
+               
+                <div className="absolute inset-0 bg-secondary transition-all duration-300 ease-in-out transform scale-x-0 scale-y-0 group-hover:scale-x-100 group-hover:scale-y-100 origin-center"></div>
+              </button>
+          
           </div>
         </div>
       </Drawer>
