@@ -33,7 +33,7 @@ const Footer = () => {
   <RxDiscordLogo className='border border-[#EFF3ED] rounded-full text-4xl p-2 hover:bg-third hover:border-none transition duration-300'/>
 </div>
       </div>
-      <div className="">
+      <div className="mt-10 md:mt-0">
         <h2 className='text-[32px] font-semibold pb-5'>Link</h2>
         <div className="text-[#c6cac4] ">
         <span className='block hover:text-third transition duration-300 hover:translate-x-2'>About Us</span>
@@ -42,7 +42,7 @@ const Footer = () => {
         <span className='block pt-3 hover:text-third transition duration-300 hover:translate-x-2'>Blogs And News</span>
         </div>
       </div>
-      <div className='md:pt-5 lg:pt-0'>
+      <div className='pt-5 lg:pt-0'>
         <h2 className='text-[32px] font-semibold pb-10'>Contact</h2>
         <div className="">
           <div className='flex gap-2 hover:text-third transition duration-300 hover:translate-x-2'>
@@ -59,7 +59,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className=''>
+      <div className='mt-10 lg:mt-0'>
         <h2 className='text-[32px] font-semibold'>Newslatter</h2>
         <div className="grid grid-cols-3 gap-2 pt-3">
         <img src={image1} alt="" className='rounded-2xl transition-transform duration-300 ease-in-out transform hover:scale-105'/>

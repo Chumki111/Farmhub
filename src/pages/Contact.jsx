@@ -6,15 +6,17 @@ const Contact = () => {
     <>
     <PrimaryHero text="Contact"/>
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex gap-4 my-10">
-        <div className="w-[50%] flex-1">
+      <div className="flex flex-col lg:flex-row gap-4 my-10">
+        {/* image section */}
+        <div className="w-full md:w-[75%] lg:w-[50%] flex-1">
           <img src={image} alt="" className="w-full"/>
         </div>
-        <div className="flex-1">
+        {/* from section */}
+        <div className="flex-1 order-first lg:order-none">
   <form action="" className="bg-white px-12 py-12 decoration-primary rounded-md border-none drop-shadow-xl">
     <span className="text-secondary pb-8 text-lg font-medium">Contact</span>
-    <h2 className="text-6xl text-primary pb-8 pt-5 font-medium">Get Touch Here</h2>
-    <div className="flex gap-6">
+    <h2 className="text-4xl md:text-6xl text-primary pb-8 pt-5 font-medium">Get Touch Here</h2>
+    <div className="flex flex-col md:flex-row gap-6 ">
       <input
         type="text"
         name="name"
@@ -44,7 +46,7 @@ const Contact = () => {
       placeholder="Your Message"
       rows="5"
     ></textarea>
-    <div className="w-[30%]">
+    <div className="w-[40%] md:w-[30%]">
       <button
         type="submit"
         className="relative bg-secondary text-white py-4 text-base rounded-2xl overflow-hidden group hover:text-primary w-full"
@@ -59,6 +61,13 @@ const Contact = () => {
 </div>
       </div>
     </div>
+    <div>
+               
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.222625936205!2d88.7679444708422!3d24.338736517941896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fbf72bef5c6d6f%3A0xe052da14b6ad2a82!2sSholua%20degree%20College!5e0!3m2!1sen!2sbd!4v1707330817070!5m2!1sen!2sbd" height="450" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="w-full"></iframe>
+               </div>
+                  
+              
+               
     </>
   )
 }
