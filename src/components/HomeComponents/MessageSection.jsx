@@ -64,7 +64,7 @@ const MessageSection = () => {
     <textarea
       name="message"
       id="message"
-      className="w-full pl-4 py-3 outline-none text-white bg-primary rounded-3xl mb-4 resize-none"
+      className="w-full pl-4 py-3 outline-none text-white bg-primary rounded-3xl mb-4"
       placeholder="Your Message"
       rows="5"
     ></textarea>

@@ -12,7 +12,7 @@ const PrimaryHero = ({text}) => {
           <div className='flex flex-col md:flex-row justify-between mt-16 pb-16'>
             {/* content section */}
             <div className='pt-8 md:pt-10'>
-              <h1 className='text-4xl md:text-4xl lg:text-7xl font-semibold md:leading-[85px]'>About Us</h1>
+              <h1 className='text-4xl md:text-4xl lg:text-7xl font-semibold md:leading-[85px]'>{text}</h1>
               
               
               <div className="flex space-x-3 items-center pt-5">
