@@ -1,6 +1,6 @@
 import PrimaryHero from "../components/Banner/PrimaryHero"
 import image from '../assets/talking-contact.png'
-
+import { FaLocationDot } from "react-icons/fa6";
 const Contact = () => {
   return (
     <>
@@ -66,7 +66,35 @@ const Contact = () => {
                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.222625936205!2d88.7679444708422!3d24.338736517941896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fbf72bef5c6d6f%3A0xe052da14b6ad2a82!2sSholua%20degree%20College!5e0!3m2!1sen!2sbd!4v1707330817070!5m2!1sen!2sbd" height="450" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="w-full"></iframe>
                </div>
                   
-              
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+          <div className="flex items-center flex-wrap  justify-center gap-7 mt-16">
+  <div className="flex space-x-4">
+    <FaLocationDot className="bg-secondary text-white text-6xl p-4 rounded-full flex items-center justify-center"/>
+    <div className=" text-primary">  
+      <h2 className="text-3xl pb-2">Address</h2>
+      <span className="block ">Dhaka 102, 8000 sent behaibior utl</span>
+      <span className="">1216, road 45 house of street</span>
+    </div>
+  </div>
+  <div className="flex space-x-4">
+    <FaLocationDot className="bg-secondary text-white text-6xl p-4 rounded-full flex items-center justify-center"/>
+    <div className=" text-primary">  
+      <h2 className="text-3xl pb-2">Lets Talk us</h2>
+      <span className="block">Phone number: +32566 - 800 - 890</span>
+      <span className="">1216, road 45 house of street</span>
+    </div>
+  </div>
+  <div className="flex space-x-4">
+    <FaLocationDot className="bg-secondary text-white text-6xl p-4 rounded-full flex items-center justify-center"/>
+    <div className=" text-primary">  
+      <h2 className="text-3xl pb-2">Send us email</h2>
+      <span className="block ">demo0023yourmailhotmail.com</span>
+      <span className="">demo23yourmail.com</span>
+    </div>
+  </div>
+</div>
+            </div>    
                
     </>
   )
