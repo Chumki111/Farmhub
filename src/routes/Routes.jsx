@@ -6,6 +6,8 @@ import Contact from "../pages/Contact";
 import Blog from "../pages/Blog";
 import Gallery from "../pages/Gallery";
 import Services from "../pages/Services";
+import ServiceDetails from "../pages/ServiceDetails";
+import { getSingleService } from "../api/service";
 
 
 export const Routes = createBrowserRouter([
@@ -24,6 +26,11 @@ export const Routes = createBrowserRouter([
             {
                 path:'/services',
                 element:<Services/>
+            },
+            {
+           path:'/service/:id',
+           element:<ServiceDetails/>,
+           loader:({params}) => getSingleService(params.id)
             },
             {
                 path:'gallery',
