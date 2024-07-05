@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import backgroundImage from '../../assets/bread-bg.png'
 import image from '../../assets/tt-slice.png'
 import { IoIosArrowForward } from "react-icons/io";
@@ -16,7 +17,9 @@ const PrimaryHero = ({text}) => {
               
               
               <div className="flex space-x-3 items-center pt-5">
+                <Link to='/'>
                 <h2 className='text-xl'>Home</h2>
+                </Link>
                 <IoIosArrowForward className='text-xl'/>
                 <h2 className='text-xl'>{text}</h2>
               </div>
