@@ -15,6 +15,10 @@ const navItems = [
     route: 'About Us',
     pathname: '/about',
   },
+  {
+   route:'Product',
+   pathname:'/product'
+  },
   
   {
     route: 'services',

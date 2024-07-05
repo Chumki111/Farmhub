@@ -8,6 +8,7 @@ import Gallery from "../pages/Gallery";
 import Services from "../pages/Services";
 import ServiceDetails from "../pages/ServiceDetails";
 import { getSingleService } from "../api/service";
+import Product from "../pages/Product";
 
 
 export const Routes = createBrowserRouter([
@@ -22,6 +23,10 @@ export const Routes = createBrowserRouter([
             {
                 path:'/about',
                 element:<About/>
+            },
+            {
+           path:'product',
+           element:<Product/>
             },
             {
                 path:'/services',
