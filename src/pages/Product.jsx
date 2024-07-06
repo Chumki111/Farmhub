@@ -15,7 +15,9 @@ const Product = () => {
     { label: "Organic", value: "organic" },
     { label: "Vegetable", value: "vegetable" }
   ];
+  const [activeCategory, setActiveCategory] = useState("");
 
+  
   const handleSortChange = (e) => {
     setSortOrder(e.target.value);
   };
@@ -29,6 +31,7 @@ const Product = () => {
   };
 
   const handleCategoryClick = (category) => {
+    setActiveCategory(category);
     setSelectedCategory(category);
   };
 
@@ -46,18 +49,29 @@ const Product = () => {
   return (
     <>
       <PrimaryHero text={"Product List"} />
-      
-      <div className="gap-2 lg:grid-cols-2 grid-cols-3 grid pt-5">
-        {categories.map(({ label, value }) => (
-          <button
-            key={value}
-            className="text-sky-200 hover:bg-sky-200 hover:text-sky-900 rounded-sm border border-sky-200 block font-semibold py-1 hover:scale-110 transition-all ease-in-out"
-            onClick={() => handleCategoryClick(value)}
-          >
-            {label}
-          </button>
-        ))}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row mt-28 space-y-8 md:space-y-0 md:space-x-8">
+          <div className="">
+            <h3>Filter By price</h3>
+          </div>
+          <div className="">
+          <div className="flex justify-center items-center">
+              <div className="">
+              {
+                categories.map(({label,value}) => (
+                  <button key={value} className={`border-[#EFF3ED] border-[1px] px-6 py-2 ml-6 text-lg font-medium rounded-lg transition duration-300 ${activeCategory === value ? 'bg-[#2AB939] text-white' : ''
+                  }`} onClick={() => handleCategoryClick(value)}>
+                    {label}
+                  </button>
+                ))
+              }
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      
+     
       <div className="flex gap-2 pt-5">
         <select onChange={handleSortChange} value={sortOrder}>
           <option value="asc">Price: Low to High</option>
