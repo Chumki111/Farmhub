@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'; 
 
 const ProductCard = ({product}) => {
   return (
@@ -21,5 +21,7 @@ const ProductCard = ({product}) => {
   </div>
   )
 }
-
+ProductCard.propTypes={
+    product : PropTypes.object
+}
 export default ProductCard

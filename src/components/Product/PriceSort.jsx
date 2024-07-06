@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'; 
 
 const PriceSort = ({sortOrder,handleSortChange}) => {
   return (
@@ -25,5 +25,8 @@ const PriceSort = ({sortOrder,handleSortChange}) => {
     </>
   )
 }
-
+PriceSort.propTypes={
+    sortOrder:PropTypes.string,
+    handleSortChange:PropTypes.func
+}
 export default PriceSort

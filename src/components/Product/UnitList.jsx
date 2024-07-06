@@ -1,5 +1,4 @@
-
-
+import PropTypes from 'prop-types'; 
 const UnitList = ({units,sortUnit,handleUnitChange}) => {
   return (
     <>
@@ -21,5 +20,9 @@ const UnitList = ({units,sortUnit,handleUnitChange}) => {
     </>
   )
 }
-
+UnitList.propTypes={
+    units:PropTypes.array,
+    sortUnit:PropTypes.string,
+    handleUnitChange:PropTypes.func
+}
 export default UnitList

@@ -1,4 +1,6 @@
+import PropTypes from 'prop-types'; 
 const ColorList = ({ color, handleColorChange }) => {
+  console.log(typeof(color));
   return (
     <div className="flex justify-between items-center p-2 cursor-pointer" onClick={() => handleColorChange(color.value)}>
       <div className="flex items-center">
@@ -11,5 +13,8 @@ const ColorList = ({ color, handleColorChange }) => {
     </div>
   );
 };
-
+ColorList.propTypes={
+  color:PropTypes.object,
+  handleColorChange:PropTypes.func
+}
 export default ColorList;

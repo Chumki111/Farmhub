@@ -1,6 +1,6 @@
 import details_svg from '../../assets/details-desert.svg'
 import flower from '../../assets/details-flower.svg'
-
+import PropTypes from 'prop-types'; 
 
 const LeftSide = ({ service }) => {
     return (
@@ -48,5 +48,7 @@ const LeftSide = ({ service }) => {
         </>
     )
 }
-
+LeftSide.propTypes={
+    service:PropTypes.object
+}
 export default LeftSide
