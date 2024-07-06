@@ -1,0 +1,332 @@
+[
+  {
+      "name": "Carrots",
+      "price": 40,
+      "price_320": 2.7,
+      "unit": "kg",
+      "description": "Crisp and sweet fresh carrots, perfect for salads and cooking.",
+      "image": "https://i.postimg.cc/cL5sGHmN/Bunch-Carrots.png",
+      "color": "orange",
+      "category": "fresh",
+      "reviews": [
+          {
+              "customer": "Alice",
+              "rating": 5,
+              "comment": "Very fresh and sweet, perfect for my salads."
+          },
+          {
+              "customer": "Bob",
+              "rating": 4,
+              "comment": "Good quality, but a bit pricey."
+          }
+      ]
+  },
+  {
+      "name": "Spinach",
+      "price": 35,
+      "price_320": 3.2,
+      "unit": "kg",
+      "description": "Leafy green fresh spinach, rich in vitamins and minerals.",
+      "image": "https://i.postimg.cc/htGd0XvF/Spinach.png",
+      "color": "green",
+      "category": "fresh",
+      "reviews": [
+          {
+              "customer": "Charlie",
+              "rating": 5,
+              "comment": "Super fresh and tastes great!"
+          },
+          {
+              "customer": "Dana",
+              "rating": 4,
+              "comment": "Good spinach, but a bit expensive."
+          }
+      ]
+  },
+  {
+      "name": "Lettuce",
+      "price":40,
+      "price_320": 2.2,
+      "unit": "head",
+      "description": "Crisp fresh lettuce, perfect for salads and sandwiches.",
+      "image": "https://i.postimg.cc/FzQSbGdG/Lettuce.png",
+      "color": "green",
+      "category": "fresh",
+      "reviews": [
+          {
+              "customer": "Eva",
+              "rating": 5,
+              "comment": "Crisp and fresh, just what I needed!"
+          },
+          {
+              "customer": "Frank",
+              "rating": 4,
+              "comment": "Good lettuce, but I've had better."
+          }
+      ]
+  },
+  {
+      "name": "Radishes",
+      "price": 30,
+      "price_320": 1.7,
+      "unit": "bunch",
+      "description": "Spicy and crunchy fresh radishes, great for salads.",
+      "image": "https://i.postimg.cc/FK83zhhM/Radishes.png",
+      "color": "red",
+      "category": "fresh",
+      "reviews": [
+          {
+              "customer": "Grace",
+              "rating": 5,
+              "comment": "Very crunchy and flavorful!"
+          },
+          {
+              "customer": "Hank",
+              "rating": 4,
+              "comment": "Good quality, but a bit too spicy for my taste."
+          }
+      ]
+  },
+  {
+      "name": "Tomatoes",
+      "price": 45,
+      "price_320": 4.3,
+      "unit": "kg",
+      "description": "Juicy and flavorful organic tomatoes grown without synthetic pesticides.",
+      "image": "https://i.postimg.cc/GhCPv3vr/tomato.png",
+      "color": "red",
+      "category": "organic",
+      "reviews": [
+          {
+              "customer": "Ivy",
+              "rating": 5,
+              "comment": "So juicy and delicious!"
+          },
+          {
+              "customer": "Jack",
+              "rating": 4,
+              "comment": "Great tomatoes, but a bit overpriced."
+          }
+      ]
+  },
+  {
+      "name": "Cucumbers",
+      "price": 50,
+      "price_320": 3.8,
+      "unit": "kg",
+      "description": "Fresh and crisp organic cucumbers, perfect for salads and snacks.",
+      "image": "https://i.postimg.cc/1XppbbhL/Cucumbers.png",
+      "color": "green",
+      "category": "organic",
+      "reviews": [
+          {
+              "customer": "Kara",
+              "rating": 5,
+              "comment": "Very crisp and fresh!"
+          },
+          {
+              "customer": "Liam",
+              "rating": 4,
+              "comment": "Good cucumbers, but a bit pricey."
+          }
+      ]
+  },
+  {
+      "name": "Bell Peppers",
+      "price": 80,
+      "price_320": 4.5,
+      "unit": "kg",
+      "description": "Colorful and sweet organic bell peppers.",
+      "image": "https://i.postimg.cc/hhWdrsXp/Bell-Peppers.png",
+      "color": "various",
+      "category": "organic",
+      "reviews": [
+          {
+              "customer": "Mona",
+              "rating": 5,
+              "comment": "Very sweet and delicious!"
+          },
+          {
+              "customer": "Noah",
+              "rating": 4,
+              "comment": "Great quality, but a bit too expensive."
+          }
+      ]
+  },
+  {
+      "name": "Zucchini",
+      "price": 45,
+      "price_320": 4.0,
+      "unit": "kg",
+      "description": "Tender and fresh organic zucchini, perfect for grilling.",
+      "image": "https://i.postimg.cc/pT5QJp0V/Zucchini.png",
+      "color": "green",
+      "category": "organic",
+      "reviews": [
+          {
+              "customer": "Olivia",
+              "rating": 5,
+              "comment": "Very tender and fresh!"
+          },
+          {
+              "customer": "Paul",
+              "rating": 4,
+              "comment": "Good zucchini, but a bit overpriced."
+          }
+      ]
+  },
+  {
+      "name": "Apples",
+      "price": 80,
+      "price_320": 3.8,
+      "unit": "kg",
+      "description": "Sweet and juicy organic apples, perfect for snacking.",
+      "image": "https://i.postimg.cc/zXZ7pFZs/snowflake-Apple-removebg-preview.png",
+      "color": "red",
+      "category": "organic",
+      "reviews": [
+          {
+              "customer": "Quinn",
+              "rating": 5,
+              "comment": "Very sweet and juicy!"
+          },
+          {
+              "customer": "Rachel",
+              "rating": 4,
+              "comment": "Good apples, but a bit too expensive."
+          }
+      ]
+  },
+  {
+      "name": "Bell Peppers",
+      "price": 60,
+      "price_320": 3.3,
+      "unit": "kg",
+      "description": "Colorful bell peppers that add a sweet crunch to any dish.",
+      "image": "https://i.postimg.cc/hhWdrsXp/Bell-Peppers.png",
+      "color": "various",
+      "category": "vegetable",
+      "reviews": [
+          {
+              "customer": "Steve",
+              "rating": 5,
+              "comment": "Very colorful and fresh!"
+          },
+          {
+              "customer": "Tina",
+              "rating": 4,
+              "comment": "Good quality, but a bit expensive."
+          }
+      ]
+  },
+  {
+      "name": "Broccoli",
+      "price": 40,
+      "price_320": 3.0,
+      "unit": "kg",
+      "description": "Fresh broccoli florets packed with nutrients and flavor.",
+      "image": "https://i.postimg.cc/VvH7L3H5/Broccoli.png",
+      "color": "green",
+      "category": "vegetable",
+      "reviews": [
+          {
+              "customer": "Uma",
+              "rating": 5,
+              "comment": "Very fresh and tasty!"
+          },
+          {
+              "customer": "Victor",
+              "rating": 4,
+              "comment": "Good broccoli, but a bit pricey."
+          }
+      ]
+  },
+  {
+      "name": "Cauliflower",
+      "price": 20,
+      "price_320": 2.7,
+      "unit": "kg",
+      "description": "Fresh and crisp cauliflower, great for roasting and mashing.",
+      "image": "https://i.postimg.cc/wjRr3jzz/Cauliflower.png",
+      "color": "white",
+      "category": "vegetable",
+      "reviews": [
+          {
+              "customer": "Wendy",
+              "rating": 5,
+              "comment": "Very crisp and fresh!"
+          },
+          {
+              "customer": "Xander",
+              "rating": 4,
+              "comment": "Good quality, but a bit too expensive."
+          }
+      ]
+  },
+  {
+      "name": "Green Beans",
+      "price": 35,
+      "price_320": 3.2,
+      "unit": "kg",
+      "description": "Tender and fresh green beans, perfect for steaming and stir-frying.",
+      "image": "https://i.postimg.cc/NF4cJfMS/Green-Beans.png",
+      "color": "green",
+      "category": "vegetable",
+      "reviews": [
+          {
+              "customer": "Yara",
+              "rating": 5,
+              "comment": "Very tender and fresh!"
+          },
+          {
+              "customer": "Zack",
+              "rating": 4,
+              "comment": "Good quality, but a bit overpriced."
+          }
+      ]
+  },
+  {
+      "name": "Sweet Potatoes",
+      "price": 36,
+      "price_320": 3.0,
+      "unit": "kg",
+      "description": "Sweet and nutritious sweet potatoes, ideal for baking and mashing.",
+      "image": "https://i.postimg.cc/SKBkjv3T/Sweet-Potatoes.png",
+      "color": "orange",
+      "category": "vegetable",
+      "reviews": [
+          {
+              "customer": "Anna",
+              "rating": 5,
+              "comment": "Very sweet and delicious!"
+          },
+          {
+              "customer": "Ben",
+              "rating": 4,
+              "comment": "Good quality, but a bit pricey."
+          }
+      ]
+  },
+  {
+      "name": "Cabbage",
+      "price":40,
+      "price_320": 2.0,
+      "unit": "head",
+      "description": "Fresh and crisp cabbage, perfect for salads and cooking.",
+      "image": "https://i.postimg.cc/7LdY06GN/white-cabbage.png",
+      "color": "green",
+      "category": "vegetable",
+      "reviews": [
+          {
+              "customer": "Dana",
+              "rating": 5,
+              "comment": "Very fresh and crunchy!"
+          },
+          {
+              "customer": "Eric",
+              "rating": 4,
+              "comment": "Good quality, but a bit too large."
+          }
+      ]
+  }
+]
