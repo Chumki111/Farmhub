@@ -108,7 +108,6 @@ const Product = () => {
             </div>
             {/* all product map and product card */}
             <div className="pt-5 grid grid-cols-1 md:grid-cols-2 gap-10 relative mt-14">
-
               {products && products.map(product => <ProductCard key={product._id} product={product} />)}
             </div>
           </div>

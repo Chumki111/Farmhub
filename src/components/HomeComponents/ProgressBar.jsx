@@ -1,9 +1,8 @@
-import{ useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const ProgressBar = () => {
   const [progress1, setProgress1] = useState(20); // Progress for "Pure And Organic"
   const [progress2, setProgress2] = useState(30); // Progress for "Healthy Food"
-
   useEffect(() => {
     // Function to increment progress for "Pure And Organic"
     const incrementProgress1 = () => {

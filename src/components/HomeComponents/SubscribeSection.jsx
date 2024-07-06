@@ -2,8 +2,6 @@ import Subscribe from '../../assets/subscribe.png'
 import { CiLocationArrow1 } from "react-icons/ci";
 const SubscribeSection = () => {
     return (
-       
-            
         <div className=" ">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col justify-between items-center lg:flex-row bg-[#EFF3ED] rounded-xl border-t-4 border-secondary p-5 lg:p-16">
@@ -28,8 +26,7 @@ const SubscribeSection = () => {
                     </div>
                 </div>
             </div>
-        </div>    
-      
+        </div>
     )
 }
 

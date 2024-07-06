@@ -1,7 +1,7 @@
-import { IoMdArrowRoundForward } from 'react-icons/io'
 import image1 from '../../assets/count1.svg'
 import image2 from '../../assets/wheat-sesh.svg'
 import image3 from '../../assets/smart-flower.svg'
+import Card from '../Services/Card'
 
 const ServicesSection = () => {
     return (
@@ -16,43 +16,12 @@ const ServicesSection = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-7">
                     {/* card 1 */}
-                    <div className="border-[#EFF3ED] border-[1px] rounded  ">
-                        <div className='flex  gap-5 py-3 px-5 '>
-                        <img src={image1} alt="" className=''/>
-                        <div className='bg-[#EFF3ED] h-36 w-[2px]'></div>
-                        <div className=''>
-                            <h1 className='text-2xl font-semibold text-primary hover:text-secondary'>Green Grow</h1>
-                            <p className='max-w-sm space-y-3 py-3 text-lg text-zinc-400'>Agriculture and farming are <br /> essential industries</p>
-                            <button className='flex text-lg text-zinc-400 items-center space-x-5'><span>Read More</span><IoMdArrowRoundForward className='text-secondary '/></button>
-                        </div>
-                        </div>
-                    </div>
+                    <Card image={image1} />
                     {/* card two */}
-                    <div className="border-[#EFF3ED] border-[1px] rounded  ">
-                        <div className='flex gap-5 py-3 px-5 '>
-                        <img src={image2} alt="" className=''/>
-                        <div className='bg-[#EFF3ED] h-36 w-[2px]'></div>
-                        <div className=''>
-                            <h1 className='text-2xl font-semibold text-primary hover:text-secondary'>Green Grow</h1>
-                            <p className='max-w-sm space-y-3 py-3 text-lg text-zinc-400'>Agriculture and farming are <br /> essential industries</p>
-                            <button className='flex text-lg text-zinc-400 items-center space-x-5'><span>Read More</span><IoMdArrowRoundForward className='text-secondary '/></button>
-                        </div>
-                        </div>
-                    </div>
+                    <Card image={image2} />
                     {/* card three */}
-                    <div className="border-[#EFF3ED] border-[1px] rounded  ">
-                        <div className='flex gap-5 py-3 px-5 '>
-                        <img src={image3} alt="" className=''/>
-                        <div className='bg-[#EFF3ED] h-36 w-[2px]'></div>
-                        <div className=''>
-                            <h1 className='text-2xl font-semibold text-primary hover:text-secondary'>Green Grow</h1>
-                            <p className='max-w-sm space-y-3 py-3 text-lg text-zinc-400'>Agriculture and farming are <br /> essential industries</p>
-                            <button className='flex text-lg text-zinc-400 items-center space-x-5'><span>Read More</span><IoMdArrowRoundForward className='text-secondary '/></button>
-                        </div>
-                        </div>
-                    </div>
+                    <Card image={image3} />
                 </div>
-
             </div>
         </div>
     )
