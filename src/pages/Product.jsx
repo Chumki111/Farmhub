@@ -2,7 +2,10 @@ import { useState, useEffect } from "react";
 import PrimaryHero from "../components/Banner/PrimaryHero";
 import { useQuery } from "@tanstack/react-query";
 import { getAllProducts } from "../api/products";
-import ProductDetails from "./ProductDetails";
+import ProductCard from "../components/Product/ProductCard";
+import ColorList from "../components/Product/ColorList";
+import PriceSort from "../components/Product/PriceSort";
+import UnitList from "../components/Product/UnitList";
 
 
 const Product = () => {
@@ -76,99 +79,49 @@ const Product = () => {
               {/* colors filter */}
               <div className="">
                 <h3 className="text-xl font-medium py-3">Filter By Color</h3>
-
-                <div className="space-y-2">
-                  {colors.map((color) => (
-                    <div
+                <div className="">
+                  {colors.map(color => (
+                    <ColorList
                       key={color.value}
-                      className={`cursor-pointer`}
-                      onClick={() => handleColorChange(color.value)}
-                    >
-                      <div className="flex justify-between items-center">
-                        <div className="flex items-center">
-                          <div className={`w-4 h-4 ${color.bgColor} rounded-full`}></div>
-                          <span className="ml-2">{color.name}</span>
-                        </div>
-
-                        <span className="p-1 rounded-full bg-[#EFF3ED] text-sm">{color.total}</span>
-
-                      </div>
-
-                    </div>
+                      color={color}
+                      handleColorChange={handleColorChange}
+                    />
                   ))}
                 </div>
-              </div>
-              {/* <select onChange={handleColorChange} value={sortColor}>
-                <option value="">All Colors</option>
-                <option value="green">Green</option>
-                <option value="red">Red</option>
-                <option value="orange">Orange</option>
-              </select> */}
-              <div className="pt-5">
-              <h3 className="text-xl font-medium py-3">Sort By Price</h3>
-        <div className="space-y-2 flex flex-col">
-          <button
-            onClick={() => handleSortChange('asc')}
-            className={`py-2 px-4 rounded-lg ${
-              sortOrder === 'asc' ? 'bg-green-200 text-green-700' : 'bg-gray-100  hover:bg-gray-200'
-            } `}
-          >
-            Price: Low to High
-          </button>
-          <button
-            onClick={() => handleSortChange('desc')}
-            className={`py-2 px-4 rounded-lg ${
-              sortOrder === 'desc' ? 'bg-green-200 text-green-700' : 'bg-gray-100  hover:bg-gray-200'
-            }`}
-          >
-            Price: High to Low
-          </button>
-        </div>
+
               </div>
 
-              <div className="py-5">
-                <h3 className="text-xl font-medium py-3">Filter By Units</h3>
-                <div className="space-y-2">
-                  {units.map((unit) => (
-                    <div
-                      key={unit.value}
-                      onClick={() => handleUnitChange(unit.value)}
-                      className={`flex items-center text-center p-2 cursor-pointer rounded-lg transition duration-300 ease-in-out 
-              ${sortUnit === unit.value ? 'bg-green-200 text-green-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
-                    >
-                      <span>{unit.name}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {/* <select onChange={handleUnitChange} value={sortUnit}>
-                <option value="">All Units</option>
-                <option value="kg">Kg</option>
-                <option value="head">Head</option>
-                <option value="bunch">Bunch</option>
-              </select> */}
+
+              {/* price filter */}
+              <PriceSort sortOrder={sortOrder} handleSortChange={handleSortChange}/>
+             
+              {/* units filter */}
+             <UnitList units={units} sortUnit={sortUnit} handleUnitChange={handleUnitChange}/>
+
             </div>
           </div>
+
           <div className="">
-            <div className="">
-              <div className="flex justify-center items-center">
-                <div className="flex flex-wrap">
-                  {
-                    categories.map(({ label, value }) => (
-                      <button key={value} className={`border-[#EFF3ED] border-[1px] px-6 py-2 ml-6 text-lg font-medium rounded-lg transition duration-300  ${activeCategory === value ? 'bg-[#2AB939] text-white' : ''
-                        }`} onClick={() => handleCategoryClick(value)}>
-                        {label}
-                      </button>
-                    ))
-                  }
-                </div>
-              </div>
-              <div className="pt-5 grid grid-cols-1 md:grid-cols-2 gap-10 relative mt-14">
-
-                {products && products.map(product => <ProductDetails key={product._id} product={product} />)}
+            {/* filter by category button */}
+            <div className="flex justify-center items-center">
+              <div className="flex flex-wrap">
+                {
+                  categories.map(({ label, value }) => (
+                    <button key={value} className={`border-[#EFF3ED] border-[1px] px-6 py-2 ml-6 text-lg font-medium rounded-lg transition duration-300  ${activeCategory === value ? 'bg-[#2AB939] text-white' : ''
+                      }`} onClick={() => handleCategoryClick(value)}>
+                      {label}
+                    </button>
+                  ))
+                }
               </div>
             </div>
+            {/* all product map and product card */}
+            <div className="pt-5 grid grid-cols-1 md:grid-cols-2 gap-10 relative mt-14">
+
+              {products && products.map(product => <ProductCard key={product._id} product={product} />)}
+            </div>
           </div>
+
         </div>
       </div>
 

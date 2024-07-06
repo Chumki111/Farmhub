@@ -1,0 +1,29 @@
+
+
+const PriceSort = ({sortOrder,handleSortChange}) => {
+  return (
+    <>
+     <div className="pt-5">
+                <h3 className="text-xl font-medium py-3">Sort By Price</h3>
+                <div className="space-y-2 flex flex-col">
+                  <button
+                    onClick={() => handleSortChange('asc')}
+                    className={`py-2 px-4 rounded-lg ${sortOrder === 'asc' ? 'bg-green-200 text-green-700' : 'bg-gray-100  hover:bg-gray-200'
+                      } `}
+                  >
+                    Price: Low to High
+                  </button>
+                  <button
+                    onClick={() => handleSortChange('desc')}
+                    className={`py-2 px-4 rounded-lg ${sortOrder === 'desc' ? 'bg-green-200 text-green-700' : 'bg-gray-100  hover:bg-gray-200'
+                      }`}
+                  >
+                    Price: High to Low
+                  </button>
+                </div>
+              </div>
+    </>
+  )
+}
+
+export default PriceSort
