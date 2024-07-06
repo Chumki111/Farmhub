@@ -6,6 +6,7 @@ import ProductCard from "../components/Product/ProductCard";
 import ColorList from "../components/Product/ColorList";
 import PriceSort from "../components/Product/PriceSort";
 import UnitList from "../components/Product/UnitList";
+import SkeletonProductCard from "../components/Product/SkeletonProductCard";
 
 
 const Product = () => {
@@ -21,6 +22,7 @@ const Product = () => {
     { label: "Organic", value: "organic" },
     { label: "Vegetable", value: "vegetable" }
   ];
+
   const colors = [
     { name: 'All', value: '', bgColor: '', total: 15 },
     { name: 'Red', value: 'red', bgColor: 'bg-red-500', total: "03" },
@@ -35,17 +37,14 @@ const Product = () => {
     { name: 'Kg', value: 'kg' },
     { name: 'Head', value: 'head' },
     { name: 'Bunch', value: 'bunch' },
-
   ];
 
   const handleSortChange = (order) => {
-    // setSortOrder(e.target.value);
-    setSortOrder(order)
+    setSortOrder(order);
   };
 
   const handleColorChange = (color) => {
     setSortColor(color);
-
   };
 
   const handleUnitChange = (unit) => {
@@ -57,8 +56,8 @@ const Product = () => {
     setSelectedCategory(category);
   };
 
-  const { data: products, refetch } = useQuery({
-    queryKey: ['products', "selectedCategory", "sortColor", "sortUnit", "sortOrder"],
+  const { data: products, refetch, isLoading } = useQuery({
+    queryKey: ['products', selectedCategory, sortColor, sortUnit, sortOrder],
     queryFn: () => getAllProducts(selectedCategory, sortColor, sortUnit, sortOrder),
     keepPreviousData: true,
   });
@@ -66,11 +65,12 @@ const Product = () => {
   useEffect(() => {
     refetch();
   }, [selectedCategory, sortColor, sortUnit, sortOrder, refetch]);
+
   return (
     <>
       <PrimaryHero text={"Product List"} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row mt-28 space-y-8 md:space-y-0 md:space-x-8 space-x-10">
+        <div className="flex flex-col lg:flex-row mt-28 space-y-8 md:space-y-0 md:space-x-8 space-x-10 md:gap-6 lg:gap-0">
           <div className="border-[#EFF3ED] border-[1px] px-4">
             <div className="flex flex-col gap-2 pt-5">
               {/* colors filter */}
@@ -95,10 +95,10 @@ const Product = () => {
           <div className="">
             {/* filter by category button */}
             <div className="flex justify-center items-center">
-              <div className="flex flex-wrap">
+              <div className="flex flex-wrap mt-6 md:mt-0">
                 {
                   categories.map(({ label, value }) => (
-                    <button key={value} className={`border-[#EFF3ED] border-[1px] px-6 py-2 ml-6 text-lg font-medium rounded-lg transition duration-300  ${activeCategory === value ? 'bg-[#2AB939] text-white' : ''
+                    <button key={value} className={`border-[#EFF3ED] border-[1px] px-6 py-2 mt-5 md:mt-0 ml-6 text-lg font-medium rounded-lg transition duration-300 ${activeCategory === value ? 'bg-[#2AB939] text-white' : ''
                       }`} onClick={() => handleCategoryClick(value)}>
                       {label}
                     </button>
@@ -106,10 +106,18 @@ const Product = () => {
                 }
               </div>
             </div>
-            {/* all product map and product card */}
-            <div className="pt-5 grid grid-cols-1 md:grid-cols-2 gap-10 relative mt-14">
-              {products && products.map(product => <ProductCard key={product._id} product={product} />)}
-            </div>
+            {/* skeleton screen */}
+            {isLoading  ? (
+              <div className="pt-5 grid grid-cols-1 lg:grid-cols-2 gap-10 mt-14">
+                {Array.from({ length: 6 }).map((_, index) => (
+                  <SkeletonProductCard key={index} />
+                ))}
+              </div>
+            ) : (
+              <div className="pt-5 grid grid-cols-1 md:grid-cols-2 gap-10  mt-14">
+                {products && products.map(product => <ProductCard key={product._id} product={product} />)}
+              </div>
+            )}
           </div>
         </div>
       </div>

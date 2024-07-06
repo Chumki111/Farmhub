@@ -9,7 +9,7 @@ const UnitList = ({ units, sortUnit, handleUnitChange }) => {
                         <div
                             key={unit.value}
                             onClick={() => handleUnitChange(unit.value)}
-                            className={`flex items-center text-center p-2 cursor-pointer rounded-lg transition duration-300 ease-in-out 
+                            className={`flex items-center justify-center text-center p-2 cursor-pointer rounded-lg transition duration-300 ease-in-out w-1/2 lg:w-[90%]
               ${sortUnit === unit.value ? 'bg-green-200 text-green-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
                         >
                             <span>{unit.name}</span>

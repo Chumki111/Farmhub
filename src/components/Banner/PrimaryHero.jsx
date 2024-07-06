@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import backgroundImage from '../../assets/bread-bg.png'
 import image from '../../assets/tt-slice.png'
 import { IoIosArrowForward } from "react-icons/io";
+import PropTypes from 'prop-types'; 
 const PrimaryHero = ({text}) => {
   return (
     <div className='flex flex-col'>
@@ -25,7 +26,7 @@ const PrimaryHero = ({text}) => {
               </div>
             </div>
             {/* image section */}
-            <div className='pt-4 md:pt-0'>
+            <div className='pt-4 md:pt-0 hidden md:block'>
               <img src={image} alt="" className='animate-pulse' />
             </div>
           </div>
@@ -34,5 +35,7 @@ const PrimaryHero = ({text}) => {
     </div>
   )
 }
-
+PrimaryHero.propTypes={
+  text:PropTypes.string
+}
 export default PrimaryHero
