@@ -66,15 +66,12 @@ const Product = () => {
   useEffect(() => {
     refetch();
   }, [selectedCategory, sortColor, sortUnit, sortOrder, refetch]);
-
-  console.log(products);
   return (
     <>
       <PrimaryHero text={"Product List"} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row mt-28 space-y-8 md:space-y-0 md:space-x-8 space-x-10">
           <div className="border-[#EFF3ED] border-[1px] px-4">
-
             <div className="flex flex-col gap-2 pt-5">
               {/* colors filter */}
               <div className="">
@@ -88,19 +85,13 @@ const Product = () => {
                     />
                   ))}
                 </div>
-
               </div>
-
-
               {/* price filter */}
-              <PriceSort sortOrder={sortOrder} handleSortChange={handleSortChange}/>
-             
+              <PriceSort sortOrder={sortOrder} handleSortChange={handleSortChange} />
               {/* units filter */}
-             <UnitList units={units} sortUnit={sortUnit} handleUnitChange={handleUnitChange}/>
-
+              <UnitList units={units} sortUnit={sortUnit} handleUnitChange={handleUnitChange} />
             </div>
           </div>
-
           <div className="">
             {/* filter by category button */}
             <div className="flex justify-center items-center">
@@ -121,13 +112,8 @@ const Product = () => {
               {products && products.map(product => <ProductCard key={product._id} product={product} />)}
             </div>
           </div>
-
         </div>
       </div>
-
-
-
-
     </>
   );
 };
