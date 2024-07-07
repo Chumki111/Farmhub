@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 
 const ProductCard = ({ product }) => {
     return (
-        <div className="relative flex flex-col md:flex-row items-center p-4 rounded-md group">
+        <div className="relative flex flex-col md:flex-row items-center p-4 md:p-10 rounded-md group">
             {/* Image Section */}
-            <div className="flex justify-center items-center  md:w-[180px] h-[160px] overflow-hidden bg-[#eff3ed] rounded-md">
-                <img src={product.image} alt={product.name} className=" object-contain" />
+            <div className="flex justify-center items-center w-[250px]  md:w-[200px] lg:w-[180px] h-[160px] overflow-hidden bg-[#eff3ed] rounded-md relative">
+                <img src={product.image} alt={product.name} className="w-full h-full object-contain" />
             </div>
             {/* Text Section */}
-            <div className="flex flex-col justify-center items-start pl-4 mt-4 md:mt-0 ml-4">
+            <div className="flex flex-col left-28  justify-center items-start md:pl-4 mt-4 md:mt-0 ml-4">
                 <h2 className="text-lg font-medium">{product.name}</h2>
                 <p className="text-sm max-w-xs text-gray-600 mt-2">{product.description}</p>
                 <p className="text-xl text-secondary  font-semibold mt-2">${product.price}</p>
@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
                 </div>
             </div>
             {/* Text Border */}
-            <div className="absolute left-20 z-[-1] inset-0 border border-gray-300 rounded-md "></div>
+            <div className="absolute top-20 md:top-0 md:left-16 lg:left-24 z-[-1] inset-0 border border-gray-300 rounded-md "></div>
         </div>
     )
 }

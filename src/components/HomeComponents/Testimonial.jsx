@@ -130,8 +130,6 @@ const Testimonial = () => {
                     </div>
                   </div>
                 </SwiperSlide>
-
-
               </Swiper>
             </div>
           </div>
