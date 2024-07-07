@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
     return (
@@ -13,7 +14,9 @@ const ProductCard = ({ product }) => {
                 <p className="text-sm max-w-xs text-gray-600 mt-2">{product.description}</p>
                 <p className="text-xl text-secondary  font-semibold mt-2">${product.price}</p>
                 <div className="my-4">
-                    <button className="px-4 py-2 border border-[#EFF3ED] rounded-full group-hover:bg-secondary group-hover:text-white transition duration-200">Add To Cart</button>
+                   <Link to={`/product/${product._id}`}>
+                   <button className="px-4 py-2 border border-[#EFF3ED] rounded-full group-hover:bg-secondary group-hover:text-white transition duration-200">Add To Cart</button>
+                   </Link>
                 </div>
             </div>
             {/* Text Border */}
