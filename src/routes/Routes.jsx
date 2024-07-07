@@ -10,6 +10,7 @@ import ServiceDetails from "../pages/ServiceDetails";
 import { getSingleService } from "../api/service";
 import Product from "../pages/Product";
 import ProductDetails from "../pages/ProductDetails";
+import { getSingleProduct } from "../api/products";
 
 
 export const Routes = createBrowserRouter([
@@ -31,7 +32,8 @@ export const Routes = createBrowserRouter([
             },
             {
            path:'/product/:id',
-           element:<ProductDetails/>
+           element:<ProductDetails/>,
+           loader:({params}) => getSingleProduct(params.id)
             },
             {
                 path:'/services',

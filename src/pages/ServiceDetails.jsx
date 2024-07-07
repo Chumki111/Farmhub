@@ -1,6 +1,5 @@
 import { useLoaderData } from "react-router-dom"
 import PrimaryHero from "../components/Banner/PrimaryHero";
-
 import LeftSide from "../components/Services/LeftSide";
 import RightSide from "../components/Services/RightSide";
 const ServiceDetails = () => {
