@@ -3,6 +3,7 @@ import PrimaryHero from "../components/Banner/PrimaryHero"
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import RightSide from "../components/Product/RightSide"
+import ReviewSection from "../components/Product/ReviewSection"
 const ProductDetails = () => {
   const product = useLoaderData();
 
@@ -17,7 +18,7 @@ const ProductDetails = () => {
           <div className="flex-1">
             {/* <LeftSide service={service} /> */}
             <div className="flex">
-              <div className="w-[350px] h-[400px] flex justify-center items-center bg-[#EFF3ED] rounded-md">
+              <div className="w-[400px] h-[400px] flex justify-center items-center bg-[#EFF3ED] rounded-md">
                 <img src={product.image} alt={product.name} className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col  items-start ml-4 border border-[#EFF3ED] rounded-md p-6">
@@ -45,14 +46,7 @@ const ProductDetails = () => {
                 </div>
               </div>
             </div>
-            <div className="border border-[#EFF3ED] mt-16 rounded-md">
-              <div className="px-12 py-16 ">
-                <h2 className="text-4xl text-secondary font-medium text-center">Reviews</h2>
-                <div className="">
-                  <h2 className="text-3xl font-medium">Based In {product.reviews.length} Comment</h2>
-                </div>
-              </div>
-            </div>
+         <ReviewSection product={product}/>
           </div>
         </div>
       </div>
