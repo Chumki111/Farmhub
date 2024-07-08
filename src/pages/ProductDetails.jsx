@@ -1,8 +1,8 @@
 import { useLoaderData } from "react-router-dom"
 import PrimaryHero from "../components/Banner/PrimaryHero"
-import RightSide from "../components/Services/RightSide";
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import RightSide from "../components/Product/RightSide"
 const ProductDetails = () => {
   const product = useLoaderData();
 
@@ -42,6 +42,14 @@ const ProductDetails = () => {
                     </span>
                     <div className="absolute inset-0 bg-third transition-all duration-300 ease-in-out transform scale-x-0 scale-y-0 group-hover:scale-x-100 group-hover:scale-y-100 origin-center"></div>
                   </button>
+                </div>
+              </div>
+            </div>
+            <div className="border border-[#EFF3ED] mt-16 rounded-md">
+              <div className="px-12 py-16 ">
+                <h2 className="text-4xl text-secondary font-medium text-center">Reviews</h2>
+                <div className="">
+                  <h2 className="text-3xl font-medium">Based In {product.reviews.length} Comment</h2>
                 </div>
               </div>
             </div>
